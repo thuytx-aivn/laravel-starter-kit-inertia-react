@@ -1,4 +1,0 @@
-{
-  "$schema": "https://schema.railpack.com",
-  "installCmd": "composer install --optimize-autoloader --no-scripts --no-interaction --no-dev"
-}
