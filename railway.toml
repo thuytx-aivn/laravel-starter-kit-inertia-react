@@ -1,6 +1,9 @@
 [build]
 builder = "railpack"
-buildCommand = "composer install --optimize-autoloader --no-scripts --no-interaction --no-dev && npm install && npm run build"
+buildCommand = "npm run build"
 
 [build.railpack]
 providers = ["php"]
+
+[variables]
+COMPOSER_NO_DEV = "1"
