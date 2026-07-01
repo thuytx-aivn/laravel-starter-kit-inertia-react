@@ -22,7 +22,7 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+RUN npm run build:ssr
 
 # Tạo .env đơn giản nhất có thể
 RUN cp .env.example .env && \
