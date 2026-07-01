@@ -44,7 +44,7 @@ RUN npm run build
 # Create .env file from example
 RUN cp .env.example .env && \
     sed -i 's/APP_ENV=local/APP_ENV=production/' .env && \
-    sed -i 's/APP_DEBUG=true/APP_DEBUG=false/' .env && \
+    sed -i 's/APP_DEBUG=true/APP_DEBUG=true/' .env && \
     sed -i 's|APP_URL=http://localhost|APP_URL=https://laravel-starter-kit-inertia-react-production.up.railway.app|' .env && \
     sed -i 's/DB_CONNECTION=sqlite/DB_CONNECTION=mysql/' .env
 
