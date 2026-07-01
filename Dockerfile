@@ -28,7 +28,7 @@ RUN npm run build
 RUN cp .env.example .env && \
     sed -i 's/APP_ENV=local/APP_ENV=production/' .env && \
     sed -i 's|APP_URL=http://localhost|APP_URL=https://laravel-starter-kit-inertia-react-production.up.railway.app|' .env && \
-    sed -i 's/DB_CONNECTION=sqlite/DB_CONNECTION=mysql/' .env && \
+    sed -i '/^DB_/d' .env && \
     php artisan key:generate --force
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
